@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Moje Zdjęcia</title>
+    <style>
+      /* Style dla elementów strony */
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      #gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 50px;
+      }
+      .photo {
+        margin: 10px;
+        max-width: 300px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+      .photo img {
+        width: 100%;
+        height: auto;
+      }
+      .photo:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s ease-in-out;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Moje Zdjęcia</h1>
+    <div id="gallery">
+      <div class="photo">
+        <img src="img/2.png" alt="zdjęcie 2" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/3.jpg" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/4.png" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/5.png" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/6.png" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/7.png" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/8.jpg" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/19.jpg" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/10.jpg" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/11.JPG" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/12.JPG" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/13.JPG" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/14.JPG" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/15.jpg" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/16.JPG" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/17.JPG" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/18.jpg" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+      <div class="photo">
+        <img src="img/21.jpg" alt="zdjęcie 3" onclick="enlarge(this)">
+      </div>
+    </div>
+    <script>
+      function enlarge(photo) {
+        var imgSrc = photo.src;
+        var enlargedImg = window.open("", "enlargedImg", "height=600,width=600");
+        enlargedImg.document.write("<html><head><title>Moje Zdjęcia</title></head><body style='background-color: black; margin: 0;'><img src='" + imgSrc + "' style='max-width: 100%; max-height: 100%; margin: auto; display: block;'></body></html>");
+      }
+    </script>
+  </body>
+</html>
