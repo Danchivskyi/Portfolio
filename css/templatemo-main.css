@@ -959,7 +959,9 @@ nav a:hover::before {
 	color: #ffffff;
 }
 
-
+.list-secondary a{
+	color: #ffffff;
+}
 
 .contact-section {
 	background-color: #333;
